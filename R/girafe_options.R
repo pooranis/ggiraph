@@ -12,7 +12,7 @@
 #' @param delay_mouseout The duration in milliseconds of the
 #' transition associated with tooltip end of display.
 #' @param offx,offy tooltip x and y offset
-#' @param use_fill,use_stroke logical, use fill and stroke properties to
+#' @param use_fill,use_stroke,use_stroke_as_fill logical, use fill and stroke properties to
 #' color tooltip.
 #' @param zindex tooltip css z-index, default to 999.
 #' @examples
@@ -43,6 +43,7 @@ opts_tooltip <- function(css = NULL,
                          opacity = .9,
                          use_fill = FALSE,
                          use_stroke = FALSE,
+                         use_stroke_as_fill = FALSE,
                          delay_mouseover = 200,
                          delay_mouseout = 500,
                          zindex = 999) {
@@ -78,7 +79,7 @@ opts_tooltip <- function(css = NULL,
     offx = offx, offy = offy,
     use_cursor_pos = use_cursor_pos,
     opacity = opacity,
-    usefill = use_fill, usestroke = use_stroke,
+    usefill = use_fill, usestroke = use_stroke, usestrokeasfill = use_stroke_as_fill,
     delay = list(over = delay_mouseover,
                  out = delay_mouseout)
   )

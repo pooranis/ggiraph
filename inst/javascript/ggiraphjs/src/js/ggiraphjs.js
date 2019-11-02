@@ -192,7 +192,7 @@ export default class ggiraphjs {
             });
     }
 
-    animateGElements(opacity, offx, offy, usecursor, delayover, delayout, usefill, usestroke) {
+    animateGElements(opacity, offx, offy, usecursor, delayover, delayout, usefill, usestroke, usestrokeasfill) {
         const selected_class = this.hoverClassname();
         const selectedkey_class = this.hoverKeyClassname();
         const selectedtheme_class = this.hoverThemeClassname();
@@ -232,6 +232,10 @@ export default class ggiraphjs {
                     if (usestroke) {
                         const stroke = this.getAttribute("stroke");
                         tooltipEl.style("border-color", stroke);
+                    }
+                    if (usestrokeasfill) {
+                        const stroke = this.getAttribute("stroke");
+                        tooltipEl.style("background-color", stroke);
                     }
                     tooltipEl.html(this.getAttribute("title"));
                     // set the tooltip again so that html entities are properly decoded

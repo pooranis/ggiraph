@@ -51,7 +51,7 @@ HTMLWidgets.widget({
             x.settings.tooltip.offx, x.settings.tooltip.offy,
             x.settings.tooltip.use_cursor_pos,
             x.settings.tooltip.delay.over, x.settings.tooltip.delay.out,
-            x.settings.tooltip.usefill, x.settings.tooltip.usestroke);
+            x.settings.tooltip.usefill, x.settings.tooltip.usestroke, x.settings.tooltip.usestrokeasfill);
         ggobj.animateToolbar();
 
         if( !x.settings.sizing.rescale ){
